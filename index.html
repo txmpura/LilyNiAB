@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100e17">
+  <title>Night Lily — Lilium 01</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="stage">
+    <canvas id="glow" aria-hidden="true"></canvas>
+    <canvas id="art" role="img" aria-label="A three-dimensional lily opening, drawn with colored ASCII characters">
+      Your browser needs canvas support to display the lily.
+    </canvas>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="masthead">
+      <p class="eyebrow"><span class="eyebrow-mark"></span> BOTANICAL STUDY <span>01 / LILIUM</span></p>
+      <h1>Night lily</h1>
+      <p class="subtitle">Six tepals, written in light.</p>
+      <p class="hint">Drag to turn <span>·</span> watch it open</p>
+    </header>
+
+    <aside class="readout" aria-live="polite">
+      <span class="readout-label">GROWTH STUDY</span>
+      <span class="readout-phase" id="phase">A quiet beginning</span>
+      <span class="readout-value" id="percent">0%</span>
+    </aside>
+
+    <input id="timeline" class="timeline" type="range" min="0" max="1000" step="1" value="0"
+      aria-label="Bloom timeline" title="Scrub through the lily's growth">
+
+    <nav class="controls" aria-label="Artwork controls">
+      <button class="control-button primary" id="pauseButton" type="button" aria-label="Pause animation">
+        <span class="button-symbol" aria-hidden="true">Ⅱ</span>
+        <span id="pauseLabel">Pause</span>
+      </button>
+      <button class="control-button" id="replayButton" type="button" aria-label="Replay the lily's growth">
+        <span class="button-symbol" aria-hidden="true">↺</span>
+        <span>Replay</span>
+      </button>
+      <button class="control-button save-button" id="saveButton" type="button" aria-label="Save artwork as a PNG">
+        <span class="button-symbol" aria-hidden="true">↓</span>
+        <span>Save PNG</span>
+      </button>
+      <span class="control-divider" aria-hidden="true"></span>
+      <button class="control-button speed-button" id="speedButton" type="button" aria-label="Change animation speed">1×</button>
+    </nav>
+
+    <p class="keyboard-hint">SPACE pause <span>·</span> R replay <span>·</span> S save <span>·</span> 1 2 3 speed</p>
+  </main>
+</body>
+</html>
